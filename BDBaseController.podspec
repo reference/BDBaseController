@@ -2,14 +2,16 @@
 #  Be sure to run `pod spec lint BDBaseController.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
 #
-#  To learn more about Podspec attributes see http://docs.cocoapods.org/specification.html
+#  To learn more about Podspec attributes see https://guides.cocoapods.org/syntax/podspec.html
 #  To see working Podspecs in the CocoaPods repo see https://github.com/CocoaPods/Specs/
 #
 
-Pod::Spec.new do |s|
+Pod::Spec.new do |spec|
 
-  s.name         = "BDBaseController"
-  s.version      = "1.4.2"
+ s.name         = "BDBaseController"
+ s.version      = "1.0.0"
+ s.ios.deployment_target = '9.0'
+  
   s.summary      = "Usefull tool for objective-c develop."
   s.description  = "Usefull tool for objective-c develop.Help yourself in this post.And buy me a cup of coffee.Just kidding.Anyway Where is coffee shop?"
   s.homepage     = "https://github.com/reference/BDBaseController"
@@ -100,4 +102,5 @@ Pod::Spec.new do |s|
             'BDBaseController' => 'Controller/BDScanController/Res/*'
         }
     end
+
 end
