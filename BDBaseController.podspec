@@ -6,10 +6,10 @@
 #  To see working Podspecs in the CocoaPods repo see https://github.com/CocoaPods/Specs/
 #
 
-Pod::Spec.new do |spec|
+Pod::Spec.new do |s|
 
  s.name         = "BDBaseController"
- s.version      = "1.0.0"
+ s.version      = "1.0.1"
  s.ios.deployment_target = '9.0'
   
   s.summary      = "Usefull tool for objective-c develop."
