@@ -7,32 +7,28 @@
 #
 
 Pod::Spec.new do |s|
-
  s.name         = "BDBaseController"
- s.version      = "1.0.1"
- s.ios.deployment_target = '9.0'
-  
-  s.summary      = "Usefull tool for objective-c develop."
-  s.description  = "Usefull tool for objective-c develop.Help yourself in this post.And buy me a cup of coffee.Just kidding.Anyway Where is coffee shop?"
-  s.homepage     = "https://github.com/reference/BDBaseController"
-  s.license      = { :type => "MIT", :file => "LICENSE" }
-  s.author       = { "Scott Ban" => "imti_bandianhong@126.com" }
-  s.platform     = :ios, "9.0"
-  s.source       = { :git => "https://github.com/reference/BDBaseController.git", :tag => "#{s.version}" }
-
-  s.frameworks = "UIKit", "Foundation", "WebKit"
-  s.requires_arc = true
-
-  s.source_files  =  "Controller/BDBaseController.h"
-  s.public_header_files = "Controller/BDBaseController.h"
-
-    s.dependency "BDToolKit"
-    s.dependency "ZXToolbox"
-    s.dependency "FFToast"
-    s.dependency "MJRefresh"
-    s.dependency "DZNEmptyDataSet"
-    s.dependency "ReactiveObjC"
-
+ s.version      = "1.0.2"
+ s.summary      = "Usefull tool for objective-c develop."
+ s.description  = "Usefull tool for objective-c develop.Help yourself in this post.And buy me a cup of coffee.Just kidding.Anyway Where is coffee shop?"
+ s.homepage     = "https://github.com/reference/BDBaseController"
+ s.license      = { :type => "MIT", :file => "LICENSE" }
+ s.author       = { "Scott Ban" => "imti_bandianhong@126.com" }
+ s.platform     = :ios, "9.0"
+ s.source       = { :git => "https://github.com/reference/BDBaseController.git", :tag => "#{s.version}" }
+ s.frameworks   = "UIKit", "Foundation", "WebKit"
+ s.requires_arc = true
+ 
+ s.source_files  = "Controller/BDBaseController.h"
+ s.public_header_files = "Controller/BDBaseController.h"
+ 
+ s.dependency "BDToolKit"
+ s.dependency "ZXToolbox"
+ s.dependency "FFToast"
+ s.dependency "MJRefresh"
+ s.dependency "DZNEmptyDataSet"
+ s.dependency "ReactiveObjC"
+ 
     s.subspec "BDBaseDefine" do |ss|
         ss.source_files  = "Controller/BDBaseDefine/*.{h,m}"
         ss.public_header_files = "Controller/BDBaseDefine/*.h"
@@ -102,5 +98,4 @@ Pod::Spec.new do |s|
             'BDBaseController' => 'Controller/BDScanController/Res/*'
         }
     end
-
 end
