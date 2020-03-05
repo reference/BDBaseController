@@ -38,19 +38,19 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param responseClass Any object that you want to parse to
 /// @param responseDataClass you can define a part of the data that response to be parse.e.g: @{@"data":xxx.class}
 /// @param completion nil
-+ (void)requestWithURL:(NSString *)url
++ (void)requestWithURL:(NSString *__nullable)url
                 params:(NSDictionary *)params
                   body:(id)body
          responseClass:(Class)responseClass
      responseDataClass:(NSDictionary *)responseDataClass
             completion:(void(^)(id responseObject, NSError *error))completion;
 
-+ (void)requestWithURL:(NSString *)url
++ (void)requestWithURL:(NSString * __nullable)url
                 params:(NSDictionary *)params
                   body:(id)body
             completion:(void(^)(id responseObject, NSError *error))completion;
 
-+ (void)uploadWithURL:(NSString *)url
++ (void)uploadWithURL:(NSString *__nullable)url
                params:(NSDictionary *)params
                  data:(NSArray<ZXHTTPFormData *> *)data
         responseClass:(Class)responseClass

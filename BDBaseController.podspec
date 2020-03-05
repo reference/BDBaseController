@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
  s.name         = "BDBaseController"
- s.version      = "1.0.2"
+ s.version      = "2.0.0"
  s.summary      = "Usefull tool for objective-c develop."
  s.description  = "Usefull tool for objective-c develop.Help yourself in this post.And buy me a cup of coffee.Just kidding.Anyway Where is coffee shop?"
  s.homepage     = "https://github.com/reference/BDBaseController"
@@ -38,6 +38,20 @@ Pod::Spec.new do |s|
         ss.dependency 'BDBaseDefine'
         ss.source_files  = "Controller/BDBaseViewController/*.{h,m}"
         ss.public_header_files = "Controller/BDBaseViewController/*.h"
+    end
+    
+    s.subspec "BDBaseAppDelegate" do |ss|
+        ss.dependency 'BDBaseDefine'
+        ss.dependency 'ZXToolbox'
+        ss.source_files  = "Controller/BDBaseAppDelegate/*.{h,m}"
+        ss.public_header_files = "Controller/BDBaseAppDelegate/*.h"
+    end
+    
+    s.subspec "BDBaseTabBarController" do |ss|
+        ss.dependency 'BDBaseDefine'
+        ss.dependency 'ZXToolbox'
+        ss.source_files  = "Controller/BDBaseTabBarController/*.{h,m}"
+        ss.public_header_files = "Controller/BDBaseTabBarController/*.h"
     end
     
     s.subspec "BDHTTP" do |ss|

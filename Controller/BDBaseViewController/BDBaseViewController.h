@@ -33,6 +33,7 @@ typedef void (^BDAlbumPickBlock)(UIImage *image);
 
 @interface BDBaseViewController : BDViewController
 @property (nonatomic,strong) ZXPopoverWindow *window;
+@property (nonatomic,strong) NSUserDefaults *ud;
 @property (nonatomic,strong) UIImage *backButtonImage;
 @property (nonatomic,copy) BDAlbumPickBlock albumPickBlock;
 //no data view data
@@ -52,6 +53,7 @@ typedef void (^BDAlbumPickBlock)(UIImage *image);
 
 - (void)popView:(UIView *)view;
 - (void)popView:(UIView *)view position:(Position)position;
+- (void)movePopedView:(UIView *)view toY:(CGFloat)y;
 - (IBAction)onWindowDismiss:(id)sender;
 
 //pick image

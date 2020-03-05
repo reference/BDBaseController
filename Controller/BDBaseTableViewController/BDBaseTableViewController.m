@@ -29,6 +29,8 @@
 @implementation BDBaseTableViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.ud = [NSUserDefaults standardUserDefaults];
+
     //
     self.window = [[ZXPopoverWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.presentedBackgroundColor = [[UIColor blackColor] colorWithAlphaComponent:.6];

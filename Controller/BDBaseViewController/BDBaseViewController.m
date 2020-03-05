@@ -31,6 +31,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.ud = [NSUserDefaults standardUserDefaults];
     //
     self.window = [[ZXPopoverWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.presentedBackgroundColor = [[UIColor blackColor] colorWithAlphaComponent:.6];
@@ -133,14 +134,14 @@
 - (void)alertText:(NSString *)text sureTitle:(NSString *)sure sureAction:(void (^)(void))handler
 {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:text preferredStyle:UIAlertControllerStyleAlert];
-    
-    [alert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"取消", nil)
-                                                        style:UIAlertActionStyleCancel
+    [alert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"确定", nil)
+                                                        style:UIAlertActionStyleDefault
                                             handler:^(UIAlertAction * _Nonnull action) {
         if (handler) {
             handler();
         }
     }]];
+    [alert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"取消", nil) style:UIAlertActionStyleCancel handler:nil]];
     [self presentViewController:alert animated:YES completion:^{}];
 }
 
@@ -154,6 +155,15 @@
         CGRect to = from;
         to.origin.y = (self.window.frame.size.height - from.size.height) / 2;
         [self.window presentView:view from:from to:to animated:YES completion:nil];
+    }
+}
+
+- (void)movePopedView:(UIView *)view toY:(CGFloat)y
+{
+    if (view) {
+        [UIView animateWithDuration:0.5 animations:^{
+            view.y = y;
+        }];
     }
 }
 

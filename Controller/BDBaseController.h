@@ -32,3 +32,5 @@
 #import "UICollectionViewController+HUD.h"
 #import "BDScanController.h"
 #import "BDBaseViewModel.h"
+#import "BDBaseAppDelegate.h"
+#import "BDBaseTabBarController.h"

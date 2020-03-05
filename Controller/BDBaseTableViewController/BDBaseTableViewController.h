@@ -33,6 +33,7 @@ typedef void (^BDAlbumPickBlock)(UIImage *image);
 
 @interface BDBaseTableViewController : BDTableViewController
 @property (nonatomic,strong) ZXPopoverWindow *window;
+@property (nonatomic,strong) NSUserDefaults *ud;
 @property (nonatomic,strong) UIImage *backButtonImage;
 @property (nonatomic,copy) BDAlbumPickBlock albumPickBlock;
 
